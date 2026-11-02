@@ -1,16 +1,16 @@
 {
  "site": {
-  "heroEtiqueta": "Desde 2017 nas ladeiras de Belo Horizonte",
+  "heroEtiqueta": "Desde 2020 nas ladeiras de Belo Horizonte",
   "heroTitulo": "Ladeira abaixo, de geração em geração",
-  "heroSub": "A FEMCAR - FEDERAÇÃO MINEIRA DE CARRINHOS DE ROLIMÃ organiza campeonatos e eventos abertos ao público em toda a região metropolitana de Belo Horizonte e no Estado de Minas Gerais. Tem carrinho para quem já pilota e para quem nunca desceu uma rua, com empréstimo gratuito de equipamentos e carrinhos adaptados.",
+  "heroSub": "A FEMCAR - FEDERAÇÃO MINEIRA DE CARRINHOS DE ROLIMÃ organiza campeonatos e eventos abertos ao público em toda a região metropolitana de Belo Horizonte e em todo o Estado de Minas Gerais. Tem carrinhos de rolimã para quem já pilota e para quem nunca desceu uma rua, com empréstimo gratuito de carrinhos tradicionais e adaptados.",
   "heroImg": "midia/femcar-ev06-c.jpg",
-  "sobre": "Tudo começou em 2017, quando um grupo de amigos com saudade das brincadeiras de infância fabricou alguns carrinhos para se divertir. A prática cresceu a cada encontro e atraiu novos praticantes. Com o crescimento em Belo Horizonte e em Minas Gerais, o grupo fundou a Federação Mineira de Carrinhos de Rolimã em 23 de junho de 2020 para reunir os pilotos do estado, organizar campeonatos e buscar o reconhecimento do rolimã como esporte.\nEsse reconhecimento só foi possível graças ao incessante trabalho da FEMCAR junto ao poder público. Em Belo Horizonte, a Lei nº 11.503/2023, de autoria do vereador Wilsinho da Tabu, instituiu o Dia Municipal do Carrinho de Rolimã, celebrado em 25 de maio. Depois, a Lei nº 11.886/2025, do vereador José Ferreira, reconheceu a corrida de carrinho de rolimã como prática esportiva na capital. Em Contagem, a Câmara Municipal aprovou o Projeto de Lei nº 422/2025, do vereador Denilson da JUC, que reconhece a corrida de rolimã como prática esportiva no município. Por fim, em todo o Estado de Minas Gerais, a Lei nº 25.969/2026, do deputado estadual Grego da Fundação, reconheceu a corrida como modalidade esportiva e atividade de lazer.",
+  "sobre": "Tudo começou em 2017, quando um grupo de amigos com saudade das brincadeiras de infância fabricaram alguns carrinhos de rolimã para se divertirem. O número de participantes crescia a cada encontro e atraiu novos praticantes. Com o crescimento em Belo Horizonte e em Minas Gerais, o grupo fundou a Federação Mineira de Carrinhos de Rolimã em 23 de junho de 2020 para reunir os pilotos do estado, organizar campeonatos e buscar o reconhecimento da pilotagem do carrinho de rolimã como esporte.\nEsse reconhecimento só foi possível graças ao incessante trabalho da FEMCAR junto ao poder público. Em Belo Horizonte, a Lei nº 11.503/2023, de autoria do vereador Wilsinho da Tabu, instituiu o Dia Municipal do Carrinho de Rolimã, celebrado em 25 de maio. Depois, a Lei nº 11.886/2025, do vereador José Ferreira, reconheceu a corrida de carrinho de rolimã como prática esportiva na capital. Em Contagem, a Câmara Municipal aprovou o Projeto de Lei nº 422/2025, do vereador Denilson da JUC, que reconhece a corrida de rolimã como prática esportiva no município. Por fim, em todo o Estado de Minas Gerais, a Lei nº 25.969/2026, do deputado estadual Grego da Fundação, reconheceu a corrida como modalidade esportiva e atividade de lazer.",
   "email": "femcarrolima@gmail.com",
   "instagram": "@femcarrolima",
   "whatsapp": "(31) 99866-9613",
-  "locaisBH": "Mangabeiras, João Pinheiro, Santa Inês, Providência, Bairro São Paulo, Sagrada Família, Mantiqueira, Savassi, Concórdia, Betânia, Barreiro, Dom Cabral, Pampulha, etc...",
+  "locaisondejárealizamoseventosemBH": Bairros: "Mangabeiras, João Pinheiro, Santa Inês, Providência, São Paulo, Sagrada Família, Ribeiro de Abreu, Planalto, Concórdia, Mantiqueira, Savassi, Betânia, Barreiro, Dom Cabral, Nova Pampulha, Taquaril, Jardim América  etc...",
   "cidades": "Contagem, Ribeirão das Neves, Itabirito, Divinópolis, Ouro Branco, Caeté, Santa Luzia, Lagoa Santa etc...",
-  "necessidades": "Construção e compra de carrinhos, inclusive adaptados\nTendas, mesas, rádios de comunicação e sonorização\nGerador de energia\nPrimeiros socorros\nÁgua, gelo e frutas para pilotos e público\nTransporte de carga até o local do evento"
+  "necessidades": "Manutenção e compra de carrinhos, inclusive adaptados\nKit's de Primeiros socorros\nÁgua, para pilotos e público\ etc..."
  },
  "eventos": [
   {
@@ -31,7 +31,7 @@
    "hora": "",
    "local": "Savassi",
    "cidade": "Belo Horizonte",
-   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "descricao": "Descida aberta ao público, realizada em parceria com Prefeitura de Belo Horizonte.",
    "img": "midia/femcar-ev01-b.jpg",
    "link": ""
   },
