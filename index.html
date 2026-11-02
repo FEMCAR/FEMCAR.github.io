@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="FEMCAR - Federação Mineira de Carrinhos de Rolimã. Campeonatos e eventos de carrinho de rolimã abertos ao público em Belo Horizonte, na região metropolitana e em Minas Gerais.">
+<meta property="og:title" content="FEMCAR - Federação Mineira de Carrinhos de Rolimã">
+<meta property="og:description" content="Ladeira abaixo, de geração em geração. Eventos de carrinho de rolimã em BH e em Minas Gerais.">
+<meta property="og:image" content="midia/femcar-ev06-c.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.webp" type="image/webp">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>FEMCAR - Federação Mineira de Carrinhos de Rolimã</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Big+Shoulders+Display:wght@700;800;900&display=swap">
+<style>
+/* Layout: a descending road band cuts the hero diagonally; sections stack like stages of a downhill run. */
+:root{
+  --bg:#ECEEEF; --surface:#FFFFFF; --ink:#16181B; --muted:#565C63; --line:#D2D6D9;
+  --red:#D3231B; --red-deep:#A8170F; --on-red:#FFFFFF;
+  --asphalt:#2A2D31; --on-asphalt:#EEF0F1; --lane:#F2C12E; --plate:#FFFFFF; --shade:rgba(22,24,27,.08);
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"Barlow","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --f-label:"Barlow Condensed","Arial Narrow",sans-serif;
+  --wrap:1180px; --r:6px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111315; --surface:#1A1D20; --ink:#ECEEEF; --muted:#A0A7AE; --line:#2D3136;
+  --red:#E8372C; --red-deep:#C42319; --on-red:#FFFFFF;
+  --asphalt:#24282C; --on-asphalt:#EEF0F1; --lane:#E9B92A; --plate:#F3F4F5; --shade:rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111315; --surface:#1A1D20; --ink:#ECEEEF; --muted:#A0A7AE; --line:#2D3136;
+  --red:#E8372C; --red-deep:#C42319; --on-red:#FFFFFF;
+  --asphalt:#24282C; --on-asphalt:#EEF0F1; --lane:#E9B92A; --plate:#F3F4F5; --shade:rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);line-height:1;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.label{font-family:var(--f-label);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem}
+:focus-visible{outline:3px solid var(--lane);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--f-label);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:1rem;padding:.75em 1.25em;border-radius:var(--r);border:2px solid transparent;text-decoration:none;cursor:pointer;background:var(--red);color:var(--on-red);transition:transform .15s,background .15s}
+.btn:hover{background:var(--red-deep);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.btn.small{font-size:.85rem;padding:.5em .9em}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:46px;width:auto;background:var(--plate);border-radius:6px;padding:2px}
+.brand{min-width:0}
+.brand-name{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:.35em;line-height:1.1}
+.brand b{font-family:var(--f-display);font-size:1.6rem;font-weight:900;letter-spacing:.02em}
+.brand-name span{font-family:var(--f-label);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.88rem}
+.brand-name{flex-direction:column;align-items:flex-start}
+@media (max-width:600px){.brand-name span{font-size:.74rem}}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:nowrap;flex:none}
+.nav a{font-family:var(--f-label);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem;text-decoration:none;padding:8px 8px;border-radius:4px;white-space:nowrap}
+.nav a:hover{background:var(--bg);color:var(--red)}
+.menu-btn{display:none;margin-left:auto;background:none;border:2px solid var(--ink);color:var(--ink);border-radius:4px;padding:6px 10px;font-family:var(--f-label);font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+@media (max-width:1100px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:8px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px))}
+  .nav.open{display:flex}
+  .nav a{padding:12px 6px;border-bottom:1px solid var(--line)}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--surface);border-bottom:1px solid var(--line)}
+.road{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.road .band{fill:var(--asphalt)}
+.road .lane{stroke:var(--lane);stroke-width:7;stroke-dasharray:46 34;fill:none}
+.road .edge{stroke:var(--on-asphalt);stroke-width:3;fill:none;opacity:.85}
+.hero-photo{position:absolute;inset:0;background-size:cover;background-position:center}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--surface) 0%,var(--surface) 38%,transparent 78%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding-block:64px 72px}
+.hero .label{color:var(--red)}
+.hero h1{font-size:clamp(2.8rem,6.2vw,5.6rem);font-weight:900;text-transform:uppercase;margin:14px 0 20px}
+.hero p.sub{max-width:34em;font-size:1.12rem;color:var(--muted)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.plate{background:var(--plate);border-radius:10px;padding:22px 22px 16px;box-shadow:0 18px 40px var(--shade);justify-self:end;width:min(100%,400px);transform:rotate(-2.5deg)}
+.plate img{display:block;width:100%;height:auto}
+.next{margin-top:14px;border-top:2px dashed #C9CDD1;padding-top:12px;color:#16181B;display:flex;gap:12px;align-items:center}
+.next .label{color:#A8170F}
+.next strong{display:block;font-family:var(--f-display);font-size:1.35rem;font-weight:800;line-height:1.05}
+.next span.small{font-size:.9rem;color:#4A5057}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:40px 48px}
+  .plate{justify-self:start;transform:none}
+  .road{display:none}
+  .hero-photo::after{background:linear-gradient(180deg,var(--surface) 0%,color-mix(in srgb,var(--surface) 82%,transparent) 100%)}
+}
+
+/* stats strip */
+.strip{background:var(--asphalt);color:var(--on-asphalt)}
+.strip .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding-block:0}
+.stat{padding:22px 18px;border-left:1px dashed rgba(238,240,241,.25)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-family:var(--f-display);font-weight:900;font-size:2.6rem;line-height:1;color:var(--lane);font-variant-numeric:tabular-nums}
+.stat span{font-size:.95rem;opacity:.9}
+@media (max-width:900px){.strip .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}.stat:nth-child(4){border-left:0;padding-left:0}}
+@media (max-width:600px){.strip .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:16px 12px}.stat:nth-child(n){border-left:1px dashed rgba(238,240,241,.25);padding-left:12px}.stat:nth-child(odd){border-left:0;padding-left:0}}
+
+/* sections */
+section.block{padding-block:84px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+.sec-head .label{color:var(--red);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;text-transform:uppercase}
+.sec-head p{max-width:40em;color:var(--muted)}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+
+/* federação */
+.fed{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+.fed .story{display:grid;gap:1em;align-content:start}
+.fed .story p{font-size:1.1rem;max-width:36em}
+.recog{margin-top:64px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr);gap:32px;align-items:start;border-top:4px solid var(--red);padding-top:28px}
+.recog-head .label{color:var(--red);display:block;margin-bottom:8px}
+.recog-head h3{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:900;text-transform:uppercase;margin-bottom:12px}
+.recog-head p{color:var(--muted)}
+.laws{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.law{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.law .label{color:var(--red)}
+.law b{font-family:var(--f-display);font-size:1.6rem;font-weight:800;line-height:1.05}
+.law p{font-size:.98rem;color:var(--muted)}
+.law .meta{font-size:.88rem}
+.law .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+.law strong{color:var(--ink)}
+@media (max-width:900px){.recog{grid-template-columns:1fr}}
+@media (max-width:640px){.laws{grid-template-columns:1fr}}
+.timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--red)}
+.timeline li{position:relative;padding:0 0 26px 26px}
+.timeline li::before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--surface);border:3px solid var(--red)}
+.timeline time{font-family:var(--f-display);font-weight:800;font-size:1.5rem;color:var(--red);display:block;line-height:1.1}
+.timeline p{color:var(--muted);font-size:1rem}
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:64px}
+.pillar{border-top:4px solid var(--ink);padding-top:16px}
+.pillar h3{font-size:1.6rem;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+.pillar p{color:var(--muted);font-size:.98rem}
+.route{margin-top:64px;background:var(--asphalt);color:var(--on-asphalt);border-radius:10px;padding:28px;position:relative;overflow:hidden}
+.route h3{font-size:1.9rem;font-weight:800;text-transform:uppercase}
+.route .sub{opacity:.8;font-size:.95rem;margin:4px 0 18px}
+.stops{display:flex;flex-wrap:wrap;gap:8px}
+.stops span{font-family:var(--f-label);font-weight:600;letter-spacing:.04em;font-size:1rem;border:1px solid rgba(238,240,241,.3);border-radius:999px;padding:4px 12px}
+.stops.cities span{border-color:var(--lane);color:var(--lane)}
+.route .rowlab{display:block;margin:18px 0 10px;color:var(--lane)}
+@media (max-width:900px){.fed{grid-template-columns:1fr;gap:40px}.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pillars{grid-template-columns:1fr}}
+
+/* agenda */
+.events{display:grid;gap:16px}
+.event{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 22px}
+.datebox{background:var(--red);color:var(--on-red);border-radius:8px;text-align:center;padding:10px 6px;font-variant-numeric:tabular-nums}
+.datebox b{display:block;font-family:var(--f-display);font-size:2.6rem;font-weight:900;line-height:1}
+.datebox span{font-family:var(--f-label);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem}
+.event h3{font-size:1.7rem;font-weight:800;margin-bottom:4px}
+.event .where{color:var(--muted);font-size:.98rem}
+.event p.desc{margin-top:6px;font-size:.98rem}
+.event img{width:140px;height:100px;object-fit:cover;border-radius:6px}
+.past-title{margin:48px 0 16px;color:var(--muted)}
+.event.past{opacity:.92}
+.event.past .datebox{background:var(--asphalt);color:var(--on-asphalt)}
+.empty{border:2px dashed var(--line);border-radius:10px;padding:28px;color:var(--muted);background:var(--surface)}
+.empty strong{display:block;color:var(--ink);font-family:var(--f-display);font-size:1.6rem;font-weight:800;margin-bottom:4px}
+@media (max-width:700px){.event{grid-template-columns:76px minmax(0,1fr);gap:16px;padding:16px}.datebox b{font-size:2rem}.event img{grid-column:1/-1;width:100%;height:180px}}
+
+/* notícias */
+.news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.post{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;text-align:left;font:inherit;color:inherit;padding:0}
+.post:hover h3{color:var(--red)}
+.post .thumb{aspect-ratio:16/10;max-width:100%;background:var(--asphalt);background-size:cover;background-position:center;position:relative}
+.post .thumb.blank::after{content:"";position:absolute;left:-10%;right:-10%;top:50%;border-top:6px dashed var(--lane);transform:rotate(-14deg)}
+.post .body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px}
+.post time{color:var(--red)}
+.post h3{font-size:1.55rem;font-weight:800;transition:color .15s}
+.post p{color:var(--muted);font-size:.98rem}
+@media (max-width:900px){.news{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.news{grid-template-columns:1fr}}
+
+/* galeria */
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;grid-auto-flow:dense;grid-auto-rows:clamp(150px,19vw,240px)}
+.gallery figure{margin:0;position:relative;border-radius:8px;overflow:hidden;background:var(--asphalt);max-width:100%;min-width:0}
+.gallery figure.wide{grid-column:span 2}
+.gallery img,.gallery video{width:100%;height:100%;object-fit:cover;display:block}
+.gallery button.open{all:unset;cursor:zoom-in;display:block;width:100%;height:100%}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;font-size:.85rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.gallery a.vlink{display:flex;flex-direction:column;justify-content:end;gap:6px;height:100%;padding:16px;text-decoration:none;color:var(--on-asphalt)}
+.gallery a.vlink b{font-family:var(--f-display);font-size:1.4rem;font-weight:800;line-height:1.05}
+.gallery a.vlink .label{color:var(--lane)}
+@media (max-width:800px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(140px,44vw,260px)}}
+.more{margin-top:24px}
+
+/* parceiros */
+.partner{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:start}
+.partner p.lead{font-size:1.12rem;max-width:34em;margin-bottom:22px}
+.needs{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.needs li{display:flex;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.needs li::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;border:3px solid var(--red);transform:translateY(1px)}
+.callout{background:var(--red);color:var(--on-red);border-radius:10px;padding:28px}
+.callout h3{font-size:2rem;font-weight:900;text-transform:uppercase;margin-bottom:10px}
+.callout p{margin-bottom:18px}
+.callout .btn{background:var(--on-red);color:var(--red-deep)}
+.callout .btn:hover{background:#F3F4F5}
+.logos{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px;align-items:center}
+.logos a,.logos div{display:flex;align-items:center;justify-content:center;min-height:80px;min-width:140px;padding:12px 18px;background:var(--plate);border-radius:8px;text-decoration:none;color:#16181B;font-family:var(--f-label);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.logos img{max-height:56px;max-width:160px}
+@media (max-width:820px){.partner{grid-template-columns:1fr}}
+
+/* contato */
+.contact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ch{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.ch .label{color:var(--red)}
+.ch .val{font-family:var(--f-display);font-weight:800;font-size:1.7rem;line-height:1.1;overflow-wrap:anywhere;user-select:all}
+.ch .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+
+footer{background:var(--asphalt);color:var(--on-asphalt);padding-block:40px}
+footer .wrap{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+footer .fl{background:var(--plate);border-radius:8px;padding:10px}
+footer .fl img{height:70px;width:auto;display:block}
+footer p{font-size:.95rem;opacity:.85}
+footer .edit-link{margin-left:auto;background:none;border:1px solid rgba(238,240,241,.35);color:var(--on-asphalt);border-radius:4px;padding:6px 12px;font-family:var(--f-label);font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+
+/* modal / lightbox */
+.overlay{position:fixed;inset:0;z-index:80;background:rgba(10,11,12,.72);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.sheet{background:var(--surface);color:var(--ink);border-radius:12px;max-width:760px;width:100%;max-height:100%;overflow:auto;position:relative}
+.sheet .cover{aspect-ratio:16/8;background-size:cover;background-position:center;max-width:100%}
+.sheet .in{padding:28px}
+.sheet h2{font-size:2.4rem;font-weight:900;margin:8px 0 16px}
+.sheet .txt p{margin-bottom:1em}
+.close{position:absolute;top:10px;right:10px;z-index:2;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:50%;width:40px;height:40px;font-size:1.3rem;cursor:pointer}
+.lightbox img,.lightbox video{max-width:100%;max-height:82vh;border-radius:8px;display:block;margin:0 auto}
+.lightbox .cap{color:#fff;text-align:center;margin-top:10px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:120;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:8px;font-weight:600;max-width:calc(100% - 32px)}
+
+/* editor */
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;box-shadow:0 10px 24px var(--shade)}
+.editor{position:fixed;inset:0;z-index:90;background:rgba(10,11,12,.5);display:flex;justify-content:flex-end}
+.panel{background:var(--bg);width:min(620px,100%);height:100%;display:flex;flex-direction:column;border-left:1px solid var(--line)}
+.panel header{background:var(--surface);border-bottom:1px solid var(--line);padding:calc(14px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 0 20px}
+.panel header .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.panel header h2{font-size:1.8rem;font-weight:900;text-transform:uppercase;margin-right:auto}
+.tabs{display:flex;gap:2px;overflow-x:auto;margin-top:12px}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;padding:10px 12px;font-family:var(--f-label);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--red)}
+.pbody{flex:1;overflow:auto;padding:20px max(16px,env(safe-area-inset-right,0px)) 20px 20px;display:grid;gap:16px;align-content:start}
+.pfoot{background:var(--surface);border-top:1px solid var(--line);padding:14px max(16px,env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pfoot .status{font-size:.9rem;color:var(--muted);margin-right:auto}
+.field{display:grid;gap:6px}
+.field label{font-family:var(--f-label);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem}
+.field .hint{font-size:.85rem;color:var(--muted)}
+.field input[type=text],.field input[type=date],.field input[type=url],.field textarea,.field select{font:inherit;font-size:1rem;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);width:100%}
+.field textarea{min-height:110px;resize:vertical}
+.media-prev{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.media-prev img,.media-prev video{width:120px;height:80px;object-fit:cover;border-radius:6px;background:var(--asphalt)}
+.items{display:grid;gap:8px}
+.item{display:flex;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.item .t{flex:1;min-width:0}
+.item .t b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .t small{color:var(--muted)}
+.item button{font:inherit;font-size:.85rem;background:none;border:1px solid var(--line);color:var(--ink);border-radius:4px;padding:4px 8px;cursor:pointer}
+.item button.danger{border-color:var(--red);color:var(--red)}
+.item button.danger.armed{background:var(--red);color:var(--on-red)}
+.formcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:14px}
+.formcard h3{font-size:1.5rem;font-weight:800}
+.row-btns{display:flex;gap:8px;flex-wrap:wrap}
+.note{background:var(--surface);border-left:4px solid var(--lane);padding:12px 14px;border-radius:4px;font-size:.92rem;color:var(--muted)}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="logo.webp" alt="Logo da FEMCAR"><span class="brand-name"><b>FEMCAR</b> <span>- Federação Mineira de Carrinhos de Rolimã</span></span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="#federacao">A Federação</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#noticias">Notícias</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#parceiros">Seja parceiro</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app">
+  <section class="hero" id="inicio">
+    <div class="hero-photo" id="heroPhoto" hidden></div>
+    <svg class="road" id="road" viewBox="0 0 1200 600" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <polygon class="band" points="940,0 1200,0 1200,600 760,600"/>
+      <line class="edge" x1="952" y1="0" x2="772" y2="600"/>
+      <line class="edge" x1="1200" y1="40" x2="1200" y2="600"/>
+      <line class="lane" x1="1075" y1="0" x2="985" y2="600"/>
+    </svg>
+    <div class="wrap">
+      <div>
+        <span class="label" id="heroEtiqueta"></span>
+        <h1 id="heroTitulo"></h1>
+        <p class="sub" id="heroSub"></p>
+        <div class="ctas">
+          <a class="btn" href="#agenda">Ver agenda</a>
+          <a class="btn ghost" id="heroWa" href="#contato" target="_blank" rel="noopener">Fale no WhatsApp</a>
+        </div>
+      </div>
+      <div class="plate">
+        <img src="logo.webp" alt="FEMCAR, Federação Mineira de Carrinhos de Rolimã">
+        <div class="next" id="nextBox"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip"><div class="wrap" id="stats"></div></div>
+
+  <section class="block" id="federacao">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="label">A Federação</span><h2>De Belo Horizonte para Minas inteira</h2></div></div>
+      <div class="fed">
+        <div class="story" id="sobre"></div>
+        <ol class="timeline">
+          <li><time>2017</time><p>Um grupo de amigos fabrica os primeiros carrinhos para matar a saudade da infância. A turma cresce a cada encontro.</p></li>
+          <li><time>23 jun 2020</time><p>Fundação da FEMCAR, com estatuto aprovado e eleição da diretoria, do conselho fiscal e do conselho administrativo.</p></li>
+          <li><time>SP · PR · ES</time><p>A FEMCAR ajuda a criar formalmente as federações de São Paulo, Paraná e Espírito Santo.</p></li>
+          <li><time>26 mai 2023</time><p>A Lei nº 11.503/2023 institui o Dia Municipal do Carrinho de Rolimã em Belo Horizonte, celebrado em 25 de maio.</p></li>
+          <li><time>26 mai 2024</time><p>Grande descida comemorativa na Av. Cristóvão Colombo, na Praça da Liberdade, com ampla cobertura da imprensa.</p></li>
+          <li><time>13 ago 2025</time><p>A Lei nº 11.886/2025 reconhece a corrida de carrinho de rolimã como prática esportiva em Belo Horizonte.</p></li>
+          <li><time>7 out 2025</time><p>A Câmara de Contagem aprova o Projeto de Lei nº 422/2025, que reconhece a corrida de rolimã como prática esportiva no município.</p></li>
+          <li><time>15 jul 2026</time><p>A Lei nº 25.969/2026 reconhece a corrida de carrinho de rolimã como modalidade esportiva e atividade de lazer em Minas Gerais.</p></li>
+        </ol>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar"><h3>Esporte e criatividade</h3><p>Construir o próprio carrinho com materiais simples desenvolve engenhosidade, noções de design e raciocínio estrutural. Pilotar treina coordenação.</p></div>
+        <div class="pillar"><h3>Inclusão</h3><p>Ações para crianças, jovens, idosos, autistas e pessoas com deficiência ou mobilidade reduzida, com carretinhas de dois lugares conduzidas por monitores.</p></div>
+        <div class="pillar"><h3>Equipamento grátis</h3><p>Empréstimo gratuito de carrinhos e equipamentos de proteção, com orientação no local, para que ninguém fique de fora por falta de material.</p></div>
+        <div class="pillar"><h3>Menos tela, mais rua</h3><p>Uma alternativa saudável ao uso excessivo de celular e computador, que aproxima famílias, vizinhos e gerações.</p></div>
+      </div>
+
+      <div class="recog">
+        <div class="recog-head"><span class="label">Reconhecimento oficial</span><h3>Rolimã é esporte, por lei</h3>
+          <p>A FEMCAR atuou fortemente junto à Prefeitura de Belo Horizonte, à Câmara de Contagem e à Assembleia Legislativa de Minas Gerais pelo reconhecimento da pilotagem de carrinho de rolimã como esporte.</p></div>
+        <div class="laws" id="laws"></div>
+      </div>
+
+      <div class="route">
+        <h3>Onde já descemos</h3>
+        <p class="sub">Praças e vias públicas de Belo Horizonte e de cidades do interior e da região metropolitana.</p>
+        <span class="label rowlab">Belo Horizonte</span>
+        <div class="stops" id="locaisBH"></div>
+        <span class="label rowlab">Outras cidades</span>
+        <div class="stops cities" id="cidades"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="agenda">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="label">Agenda</span><h2>Próximas descidas</h2></div><p>Eventos abertos ao público. Traga a família: a FEMCAR empresta carrinho e equipamento de proteção.</p></div>
+      <div class="events" id="upcoming"></div>
+      <h3 class="label past-title" id="pastTitle">Eventos realizados</h3>
+      <div class="events" id="past"></div>
+      <div class="more"><button class="btn ghost small" id="pastMore" hidden>Ver todos os eventos realizados</button></div>
+    </div>
+  </section>
+
+  <section class="block" id="noticias">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="label">Notícias</span><h2>Da pista e da imprensa</h2></div></div>
+      <div class="news" id="newsList"></div>
+    </div>
+  </section>
+
+  <section class="block alt" id="galeria">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="label">Galeria</span><h2>Fotos dos eventos</h2></div><p id="galSub">Registros das descidas realizadas em parceria com a Prefeitura de Belo Horizonte.</p></div>
+      <div class="gallery" id="gallery"></div>
+      <div class="more"><button class="btn ghost small" id="galMore" hidden>Ver mais fotos</button></div>
+    </div>
+  </section>
+
+  <section class="block" id="parceiros">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="label">Seja parceiro</span><h2>Ajude o rolimã a descer mais ruas</h2></div></div>
+      <div class="partner">
+        <div>
+          <p class="lead">Cada evento em via pública exige estrutura. A FEMCAR busca parcerias com o poder público e com a iniciativa privada, e recursos como emendas parlamentares impositivas, para levar o rolimã a mais bairros e cidades de Minas com segurança e qualidade.</p>
+          <span class="label" style="color:var(--red);display:block;margin-bottom:8px">O que um evento precisa</span>
+          <ul class="needs" id="needs"></ul>
+        </div>
+        <div class="callout">
+          <h3>Quero apoiar</h3>
+          <p>Empresas, gabinetes e órgãos públicos podem patrocinar eventos, doar equipamentos ou destinar recursos. Fale com a diretoria.</p>
+          <div class="row-btns">
+            <a class="btn" id="partnerWa" href="#contato" target="_blank" rel="noopener">WhatsApp da diretoria</a>
+          </div>
+          <p style="margin:16px 0 0;font-size:.95rem">ou escreva para <b id="partnerMail"></b></p>
+        </div>
+      </div>
+      <div id="partnersWrap">
+        <span class="label" style="display:block;margin-top:48px;color:var(--muted)">Quem já apoia</span>
+        <div class="logos" id="logos"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="contato">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="label">Contato</span><h2>Fale com a FEMCAR</h2></div><p>Inscrições, convites para eventos, imprensa e parcerias.</p></div>
+      <div class="contact">
+        <div class="ch"><span class="label">WhatsApp e telefone</span><span class="val" id="cWa"></span><div class="acts"><a class="btn small" id="cWaLink" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a><button class="btn small ghost" data-copy="whatsapp">Copiar</button></div></div>
+        <div class="ch"><span class="label">E-mail</span><span class="val" id="cMail"></span><div class="acts"><button class="btn small ghost" data-copy="email">Copiar e-mail</button></div></div>
+        <div class="ch"><span class="label">Instagram</span><span class="val" id="cIg"></span><div class="acts"><a class="btn small" id="cIgLink" href="#" target="_blank" rel="noopener">Abrir Instagram</a></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fl"><img src="logo.webp" alt="FEMCAR"></div>
+    <div>
+      <p><b>FEMCAR · Federação Mineira de Carrinhos de Rolimã</b></p>
+      <p>Fundada em 23 de junho de 2020 · Belo Horizonte, Minas Gerais</p>
+      <p id="fContacts"></p>
+    </div>
+  </div>
+</footer>
+
+<div id="layer"></div>
+
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const MESES=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+const MESES_L=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const parseD=d=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||"");return m?{y:+m[1],m:+m[2]-1,d:+m[3]}:null};
+const longDate=d=>{const p=parseD(d);return p?`${p.d} de ${MESES_L[p.m]} de ${p.y}`:""};
+const todayISO=()=>{const t=new Date();return new Date(t.getTime()-t.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+const list=s=>String(s||"").split(/[,\n]/).map(x=>x.trim().replace(/\s*etc\.*$/i,"").trim()).filter(Boolean);
+const hasEtc=s=>/etc\.*\s*$/i.test(String(s||"").trim());
+const lines=s=>String(s||"").split("\n").map(x=>x.trim()).filter(Boolean);
+const digits=s=>String(s||"").replace(/\D/g,"");
+const waURL=s=>{let d=digits(s);if(d.length<=11)d="55"+d;return "https://wa.me/"+d};
+const igHandle=s=>String(s||"").trim().replace(/^@/,"").replace(/^https?:\/\/(www\.)?instagram\.com\//,"").replace(/\/.*$/,"");
+const igURL=s=>"https://www.instagram.com/"+igHandle(s)+"/";
+const blobURLs={};           // caminho -> URL temporária de arquivos enviados nesta sessão
+const src=p=>blobURLs[p]||String(p||"").replace(/^\/(?=midia\/)/,"");
+
+let DATA=null;
+const UI={allGal:false,allPast:false};
+
+function toast(msg,ms){const t=document.createElement("div");t.className="toast";t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),ms||3200)}
+async function copy(text){try{await navigator.clipboard.writeText(text);toast("Copiado: "+text)}catch(e){toast("Selecione o texto e copie: "+text,5000)}}
+
+/* ---------- render do site ---------- */
+function render(D){
+  const S=D.site||{};
+  $("#heroEtiqueta").textContent=S.heroEtiqueta||"";
+  $("#heroTitulo").textContent=S.heroTitulo||"";
+  $("#heroSub").textContent=S.heroSub||"";
+  const hp=$("#heroPhoto");
+  if(S.heroImg){hp.hidden=false;hp.style.backgroundImage=`url("${src(S.heroImg)}")`;$("#road").style.display="none"}
+  else{hp.hidden=true;$("#road").style.display=""}
+  $("#sobre").innerHTML=lines(S.sobre).map(p=>`<p>${esc(p)}</p>`).join("");
+  const bh=list(S.locaisBH),cid=list(S.cidades);
+  $("#locaisBH").innerHTML=bh.map(x=>`<span>${esc(x)}</span>`).join("");
+  $("#cidades").innerHTML=cid.map(x=>`<span>${esc(x)}</span>`).join("");
+
+  const today=todayISO();
+  const evs=(D.eventos||[]).slice();
+  const up=evs.filter(e=>e.data&&e.data>=today).sort((a,b)=>a.data.localeCompare(b.data));
+  const past=evs.filter(e=>!e.data||e.data<today).sort((a,b)=>(b.data||"").localeCompare(a.data||""));
+
+  $("#stats").innerHTML=[
+    ["2017","início dos encontros de rolimã"],
+    ["2020","fundação oficial da federação"],
+    [String((D.leis||[]).length),"conquistas no Legislativo"],
+    [bh.length+(hasEtc(S.locaisBH)?"+":""),"locais com evento em BH"],
+    [cid.length+(hasEtc(S.cidades)?"+":""),"cidades no interior e RMBH"]
+  ].map(([b,s])=>`<div class="stat"><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join("");
+
+  const nx=up[0];
+  $("#nextBox").innerHTML=nx
+    ? `<div><span class="label">Próxima descida</span><strong>${esc(nx.titulo)}</strong><span class="small">${esc(longDate(nx.data))}${nx.local?" · "+esc(nx.local):""}</span></div>`
+    : `<div><span class="label">Anote na agenda</span><strong>25 de maio, Dia Municipal do Carrinho de Rolimã</strong><span class="small">Belo Horizonte</span></div>`;
+
+  const evHTML=(e,isPast)=>{const p=parseD(e.data);
+    return `<article class="event${isPast?" past":""}">
+      <div class="datebox">${p?`<b>${p.d}</b><span>${MESES[p.m]} ${p.y}</span>`:`<b>—</b><span>a definir</span>`}</div>
+      <div style="min-width:0"><h3>${esc(e.titulo)}</h3>
+        <div class="where">${[e.hora,e.local,e.cidade].filter(Boolean).map(esc).join(" · ")}</div>
+        ${e.descricao?`<p class="desc">${esc(e.descricao)}</p>`:""}
+        ${e.link&&!isPast?`<p style="margin-top:10px"><a class="btn small" href="${esc(e.link)}" target="_blank" rel="noopener">Inscrição e detalhes</a></p>`:""}
+      </div>
+      ${e.img?`<img src="${esc(src(e.img))}" alt="" loading="lazy">`:""}
+    </article>`};
+  $("#upcoming").innerHTML=up.length?up.map(e=>evHTML(e,false)).join("")
+    :`<div class="empty"><strong>Nenhuma descida marcada no momento</strong>As próximas datas aparecem aqui e no Instagram ${esc(S.instagram||"")}. Quer levar um evento para o seu bairro ou cidade? Fale com a gente pelo WhatsApp.</div>`;
+  const pastShown=UI.allPast?past:past.slice(0,4);
+  $("#past").innerHTML=pastShown.map(e=>evHTML(e,true)).join("");
+  $("#pastMore").hidden=past.length<=4||UI.allPast;
+  $("#pastTitle").hidden=!past.length;
+
+  const news=(D.noticias||[]).slice().sort((a,b)=>(b.data||"").localeCompare(a.data||""));
+  $("#newsList").innerHTML=news.length?news.map(n=>`<button class="post" data-news="${esc(n.id)}">
+      <div class="thumb${n.img?"":" blank"}" ${n.img?`style="background-image:url('${esc(src(n.img))}')"`:""}></div>
+      <div class="body">${n.data?`<time class="label">${esc(longDate(n.data))}</time>`:""}<h3>${esc(n.titulo)}</h3><p>${esc(n.resumo)}</p></div>
+    </button>`).join(""):`<div class="empty"><strong>Sem notícias publicadas</strong>As novidades da federação aparecem aqui.</div>`;
+
+  const galAll=D.galeria||[];const gal=UI.allGal?galAll:galAll.slice(0,12);
+  $("#galMore").hidden=galAll.length<=12||UI.allGal;
+  $("#gallery").innerHTML=gal.length?gal.map((g,i)=>{
+    const cap=g.legenda?`<figcaption>${esc(g.legenda)}</figcaption>`:"";
+    if(g.tipo==="link") return `<figure class="${g.destaque?"wide":""}"><a class="vlink" href="${esc(g.url)}" target="_blank" rel="noopener"><span class="label">Vídeo ↗</span><b>${esc(g.legenda||"Assistir vídeo")}</b></a></figure>`;
+    if(g.tipo==="video") return `<figure class="${g.destaque?"wide":""}"><video src="${esc(src(g.url))}" controls preload="metadata" playsinline></video></figure>`;
+    return `<figure class="${g.destaque?"wide":""}"><button class="open" data-photo="${i}" aria-label="Ampliar foto"><img src="${esc(src(g.url))}" alt="${esc(g.legenda||"Foto de evento da FEMCAR")}" loading="lazy"></button>${cap}</figure>`;
+  }).join(""):`<div class="empty" style="grid-column:1/-1"><strong>Galeria em montagem</strong>As fotos e vídeos das descidas entram aqui em breve.</div>`;
+
+  $("#laws").innerHTML=(D.leis||[]).map(l=>`<div class="law"><span class="label">${esc(l.ente)}</span><b>${esc(l.titulo)}</b>
+      <p>${esc(l.descricao)}</p>${l.autor?`<p>Autoria: <strong>${esc(l.autor)}</strong></p>`:""}${l.detalhes?`<p class="meta">${esc(l.detalhes)}</p>`:""}
+      <div class="acts">${l.link?`<a class="btn small" href="${esc(l.link)}" target="_blank" rel="noopener">${esc(l.linkTexto||"Ver texto oficial")}</a>`:""}${l.link2?`<a class="btn small ghost" href="${esc(l.link2)}" target="_blank" rel="noopener">${esc(l.link2Texto||"Mais informações")}</a>`:""}</div></div>`).join("");
+  $("#needs").innerHTML=lines(S.necessidades).map(n=>`<li>${esc(n)}</li>`).join("");
+  const parts=D.parceiros||[];
+  $("#partnersWrap").hidden=!parts.length;
+  $("#logos").innerHTML=parts.map(p=>{const inner=p.logo?`<img src="${esc(src(p.logo))}" alt="${esc(p.nome)}">`:esc(p.nome);
+    return p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener" title="${esc(p.nome)}">${inner}</a>`:`<div title="${esc(p.nome)}">${inner}</div>`}).join("");
+
+  const wa=waURL(S.whatsapp);
+  ["#heroWa","#partnerWa","#cWaLink"].forEach(s=>$(s).href=wa);
+  $("#partnerMail").textContent=S.email||"";
+  $("#cWa").textContent=S.whatsapp||"";
+  $("#cMail").textContent=S.email||"";
+  $("#cIg").textContent=S.instagram||"";
+  $("#cIgLink").href=igURL(S.instagram);
+  $("#fContacts").textContent=[S.email,S.instagram,S.whatsapp].filter(Boolean).join(" · ");
+}
+
+/* ---------- interações públicas ---------- */
+function openLayer(html,cls){
+  const L=$("#layer");L.innerHTML=`<div class="overlay ${cls||""}" role="dialog" aria-modal="true">${html}</div>`;
+  const ov=L.firstChild;ov.addEventListener("click",e=>{if(e.target===ov||e.target.closest("[data-close]"))L.innerHTML=""});
+  const c=ov.querySelector("[data-close]");if(c)c.focus();
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#layer").innerHTML=""});
+document.addEventListener("click",e=>{
+  const n=e.target.closest("[data-news]");
+  if(n){const D=EDIT.draft||DATA;const it=(D.noticias||[]).find(x=>x.id===n.dataset.news);if(!it)return;
+    openLayer(`<div class="sheet"><button class="close" data-close aria-label="Fechar">×</button>
+      ${it.img?`<div class="cover" style="background-image:url('${esc(src(it.img))}')"></div>`:""}
+      <div class="in">${it.data?`<span class="label" style="color:var(--red)">${esc(longDate(it.data))}</span>`:""}<h2>${esc(it.titulo)}</h2>
+      <div class="txt">${lines(it.texto).map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+      ${it.link?`<a class="btn small" href="${esc(it.link)}" target="_blank" rel="noopener">Ler mais</a>`:""}</div></div>`);return}
+  const ph=e.target.closest("[data-photo]");
+  if(ph){const D=EDIT.draft||DATA;const g=D.galeria[+ph.dataset.photo];
+    openLayer(`<div class="lightbox" style="position:relative;max-width:100%"><button class="close" data-close aria-label="Fechar">×</button><img src="${esc(src(g.url))}" alt="${esc(g.legenda||"")}">${g.legenda?`<p class="cap">${esc(g.legenda)}</p>`:""}</div>`);return}
+  const cp=e.target.closest("[data-copy]");
+  if(cp){const S=(EDIT.draft||DATA).site;copy(S[cp.dataset.copy]||"");return}
+  const a=e.target.closest(".nav a");if(a){$("#nav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false")}
+});
+$("#menuBtn").addEventListener("click",()=>{const o=$("#nav").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",String(o))});
+
+/* ---------- editor ---------- */
+const EDIT={draft:null,pending:{},tab:"geral",editing:null,api:null};
+const SCHEMAS={
+  eventos:{nome:"Agenda",item:"evento",campos:[["titulo","Título","text"],["data","Data","date"],["hora","Horário (ex.: 9h às 13h)","text"],["local","Local","text"],["cidade","Cidade","text"],["descricao","Descrição","textarea"],["img","Imagem","image"],["link","Link de inscrição ou mais informações","url"]],
+    resumo:e=>[longDate(e.data)||"sem data",e.local].filter(Boolean).join(" · ")},
+  noticias:{nome:"Notícias",item:"notícia",campos:[["titulo","Título","text"],["data","Data","date"],["resumo","Resumo (aparece no cartão)","text"],["texto","Texto completo (um parágrafo por linha)","textarea"],["img","Imagem","image"],["link","Link externo (matéria na imprensa, opcional)","url"]],
+    resumo:n=>longDate(n.data)||"sem data"},
+  galeria:{nome:"Galeria",item:"foto ou vídeo",campos:[["tipo","Tipo","select",[["foto","Foto"],["video","Vídeo (arquivo até 15 MB)"],["link","Vídeo por link (Instagram, YouTube)"]]],["url","Arquivo ou link","media"],["legenda","Legenda","text"],["destaque","Destaque (ocupa duas colunas)","checkbox"]],
+    resumo:g=>({foto:"Foto",video:"Vídeo",link:"Link de vídeo"}[g.tipo]||"Foto")},
+  leis:{nome:"Leis",item:"lei",campos:[["ente","Local (cidade ou estado)","text"],["titulo","Número da lei ou projeto","text"],["descricao","O que a lei faz","textarea"],["autor","Autoria","text"],["detalhes","Origem e publicação","text"],["link","Link principal","url"],["linkTexto","Texto do botão principal","text"],["link2","Segundo link (opcional)","url"],["link2Texto","Texto do segundo link","text"]],resumo:l=>l.ente||""},
+  parceiros:{nome:"Parceiros",item:"parceiro",campos:[["nome","Nome","text"],["url","Site (opcional)","url"],["logo","Logo","image"]],resumo:p=>p.url||""}
+};
+const GERAL=[["heroEtiqueta","Faixa acima do título","text"],["heroTitulo","Título principal","text"],["heroSub","Texto de abertura","textarea"],["heroImg","Foto de capa (opcional)","image"],["sobre","Texto da história (um parágrafo por linha)","textarea"],["whatsapp","WhatsApp / telefone","text"],["email","E-mail","text"],["instagram","Instagram","text"],["locaisBH","Locais de evento em BH (separe por vírgula)","textarea"],["cidades","Cidades do interior e RMBH (separe por vírgula)","textarea"],["necessidades","O que um evento precisa (um item por linha)","textarea"]];
+const uid=p=>p+"-"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const slug=s=>String(s||"arquivo").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,40)||"arquivo";
+const DRAFT_KEY="femcar-rascunho";
+function saveLocal(){try{localStorage.setItem(DRAFT_KEY,JSON.stringify(EDIT.draft))}catch(e){}}
+function clearLocal(){try{localStorage.removeItem(DRAFT_KEY)}catch(e){}}
+function dirty(){return EDIT.draft&&(JSON.stringify(EDIT.draft)!==JSON.stringify(DATA)||Object.keys(EDIT.pending).length)}
+
+async function compressImage(file){
+  if(!/^image\/(jpeg|png|webp)$/.test(file.type))return file;
+  try{const bmp=await createImageBitmap(file);const max=1800;let {width:w,height:h}=bmp;
+    if(w<=max&&h<=max&&file.size<900e3)return file;
+    const k=Math.min(1,max/Math.max(w,h));w=Math.round(w*k);h=Math.round(h*k);
+    const c=document.createElement("canvas");c.width=w;c.height=h;c.getContext("2d").drawImage(bmp,0,0,w,h);
+    return await new Promise(r=>c.toBlob(b=>r(b||file),"image/jpeg",.84));
+  }catch(e){return file}
+}
+async function addFile(file,kind,base){
+  if(kind==="video"){if(file.size>15e6){toast("Vídeo maior que 15 MB. Publique no Instagram ou YouTube e adicione como link.",6000);return null}}
+  const blob=kind==="video"?file:await compressImage(file);
+  const ext=kind==="video"?(file.name.split(".").pop()||"mp4").toLowerCase():(blob.type==="image/png"?"png":blob.type==="image/webp"?"webp":"jpg");
+  const path=`midia/${Date.now().toString(36)}-${slug(base||file.name.replace(/\.[^.]+$/,""))}.${ext}`;
+  EDIT.pending[path]=blob;blobURLs[path]=URL.createObjectURL(blob);return path;
+}
+
+function fieldHTML(key,label,type,val,opts){
+  const id="f-"+key;
+  if(type==="textarea")return `<div class="field"><label for="${id}">${label}</label><textarea id="${id}" data-k="${key}">${esc(val)}</textarea></div>`;
+  if(type==="select")return `<div class="field"><label for="${id}">${label}</label><select id="${id}" data-k="${key}">${opts.map(([v,t])=>`<option value="${v}"${v===(val||opts[0][0])?" selected":""}>${t}</option>`).join("")}</select></div>`;
+  if(type==="checkbox")return `<div class="field"><label><input type="checkbox" id="${id}" data-k="${key}"${val?" checked":""}> ${label}</label></div>`;
+  if(type==="image"||type==="media"){
+    const isVid=/\.(mp4|mov|webm|m4v)$/i.test(val||"");
+    const prev=val?(isVid?`<video src="${esc(src(val))}" muted></video>`:/^https?:\/\/(www\.)?(instagram|youtube|youtu\.be)/.test(val)?"":`<img src="${esc(src(val))}" alt="">`):"";
+    return `<div class="field"><label for="${id}">${label}</label>
+      <div class="media-prev">${prev}<input type="file" id="${id}-file" data-file="${key}" accept="${type==="media"?"image/*,video/*":"image/*"}">${val?`<button type="button" class="btn small ghost" data-clear="${key}">Remover</button>`:""}</div>
+      <input type="text" id="${id}" data-k="${key}" value="${esc(val)}" placeholder="ou cole um link (https://…)">
+      <span class="hint">${type==="media"?"Fotos são reduzidas automaticamente. Para vídeos grandes, use o tipo “Vídeo por link”.":"A imagem é reduzida automaticamente antes de publicar."}</span></div>`;
+  }
+  return `<div class="field"><label for="${id}">${label}</label><input type="${type==="date"?"date":type==="url"?"url":"text"}" id="${id}" data-k="${key}" value="${esc(val)}"></div>`;
+}
+
+function renderPanel(){
+  const P=$("#pbody");const D=EDIT.draft;
+  document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===EDIT.tab)));
+  if(EDIT.tab==="geral"){
+    P.innerHTML=`<div class="note">Edite os textos e contatos. As mudanças aparecem no site ao fundo, mas só ficam públicas quando você clicar em <b>Publicar alterações</b>.</div>
+      <div class="formcard" data-scope="site">${GERAL.map(([k,l,t])=>fieldHTML(k,l,t,D.site[k])).join("")}</div>`;
+  }else{
+    const sc=SCHEMAS[EDIT.tab];const arr=D[EDIT.tab]||(D[EDIT.tab]=[]);
+    if(EDIT.editing){
+      const it=arr.find(x=>x.id===EDIT.editing)||{};
+      P.innerHTML=`<div class="formcard" data-scope="item"><h3>${it._novo?"Novo":"Editar"} ${sc.item}</h3>
+        ${sc.campos.map(([k,l,t,o])=>fieldHTML(k,l,t,it[k],o)).join("")}
+        <div class="row-btns"><button class="btn small" data-act="done">Concluir</button>${it._novo?`<button class="btn small ghost" data-act="cancelnew">Descartar</button>`:""}</div></div>`;
+    }else{
+      const sorted=["galeria","parceiros","leis"].includes(EDIT.tab)?arr:arr.slice().sort((a,b)=>(b.data||"").localeCompare(a.data||""));
+      P.innerHTML=`<div class="row-btns"><button class="btn small" data-act="new">Adicionar ${sc.item}</button></div>
+        <div class="items">${sorted.length?sorted.map(x=>`<div class="item"><div class="t"><b>${esc(x.titulo||x.nome||x.legenda||"(sem título)")}</b><small>${esc(sc.resumo(x))}</small></div>
+          ${["galeria","leis"].includes(EDIT.tab)?`<button data-act="up" data-id="${esc(x.id)}" aria-label="Mover para cima">↑</button><button data-act="down" data-id="${esc(x.id)}" aria-label="Mover para baixo">↓</button>`:""}
+          <button data-act="edit" data-id="${esc(x.id)}">Editar</button><button class="danger" data-act="del" data-id="${esc(x.id)}">Excluir</button></div>`).join("")
+          :`<div class="empty">Nenhum item ainda. Use “Adicionar ${sc.item}”.</div>`}</div>`;
+    }
+  }
+  updateStatus();
+}
+function updateStatus(){const s=$("#pstatus");if(s)s.textContent=dirty()?"Há alterações não publicadas.":"Tudo publicado."}
+
+function openEditor(){
+  if(!EDIT.draft){
+    let saved=null;try{saved=JSON.parse(localStorage.getItem(DRAFT_KEY)||"null")}catch(e){}
+    EDIT.draft=structuredClone(DATA);
+    if(saved&&JSON.stringify(saved)!==JSON.stringify(DATA))EDIT.restore=saved;
+  }
+  const L=document.createElement("div");L.className="editor";L.id="editor";
+  L.innerHTML=`<div class="panel" role="dialog" aria-modal="true" aria-label="Editor do site">
+    <header><div class="row"><h2>Editor do site</h2><button class="btn small ghost" data-act="close">Fechar</button></div>
+      <div class="tabs" role="tablist">${[["geral","Textos e contatos"],["eventos","Agenda"],["noticias","Notícias"],["galeria","Galeria"],["leis","Leis"],["parceiros","Parceiros"]].map(([k,t])=>`<button role="tab" data-tab="${k}">${t}</button>`).join("")}</div></header>
+    <div class="pbody" id="pbody"></div>
+    <div class="pfoot"><span class="status" id="pstatus"></span><button class="btn small ghost" data-act="discard">Descartar</button><button class="btn small" data-act="publish">Publicar alterações</button></div></div>`;
+  document.body.appendChild(L);
+  if(EDIT.restore){const b=document.createElement("div");b.className="note";b.innerHTML=`Existe um rascunho não publicado salvo neste navegador. <button class="btn small" data-act="restore" style="margin-left:8px">Recuperar</button> <button class="btn small ghost" data-act="dropdraft">Ignorar</button>`;L.querySelector(".pbody").before(b);b.style.margin="12px 20px 0"}
+  renderPanel();
+  L.addEventListener("input",onInput);L.addEventListener("change",onChange);L.addEventListener("click",onPanelClick);
+}
+function closeEditor(){const e=$("#editor");if(e)e.remove()}
+
+function target(scopeEl){
+  if(scopeEl.closest('[data-scope="site"]'))return EDIT.draft.site;
+  return (EDIT.draft[EDIT.tab]||[]).find(x=>x.id===EDIT.editing);
+}
+function onInput(e){const k=e.target.dataset.k;if(!k)return;const t=target(e.target);if(!t)return;
+  t[k]=e.target.type==="checkbox"?e.target.checked:e.target.value;
+  if(t._novo&&k!=="tipo")delete t._novo;
+  saveLocal();render(EDIT.draft);updateStatus()}
+async function onChange(e){
+  if(e.target.type==="checkbox"||e.target.tagName==="SELECT"){onInput(e);if(e.target.tagName==="SELECT")renderPanel();return}
+  const fk=e.target.dataset.file;if(!fk||!e.target.files[0])return;
+  const t=target(e.target);const f=e.target.files[0];
+  const isVid=f.type.startsWith("video/");
+  if(fk==="url"&&t){t.tipo=isVid?"video":"foto"}
+  const path=await addFile(f,isVid?"video":"image",t.titulo||t.nome||t.legenda||f.name);
+  if(!path)return;
+  t[fk]=path;delete t._novo;saveLocal();render(EDIT.draft);renderPanel();
+}
+async function onPanelClick(e){
+  const tb=e.target.closest("[data-tab]");if(tb){EDIT.tab=tb.dataset.tab;EDIT.editing=null;renderPanel();return}
+  const cl=e.target.closest("[data-clear]");if(cl){const t=target(cl);t[cl.dataset.clear]="";saveLocal();render(EDIT.draft);renderPanel();return}
+  const b=e.target.closest("[data-act]");if(!b)return;
+  const act=b.dataset.act,arr=EDIT.draft[EDIT.tab],id=b.dataset.id;
+  if(act==="close"){closeEditor();return}
+  if(act==="restore"){EDIT.draft=EDIT.restore;EDIT.restore=null;b.parentElement.remove();render(EDIT.draft);renderPanel();return}
+  if(act==="dropdraft"){EDIT.restore=null;clearLocal();b.parentElement.remove();return}
+  if(act==="new"){const it={id:uid(EDIT.tab.slice(0,2)),_novo:true};if(EDIT.tab==="galeria")it.tipo="foto";arr.push(it);EDIT.editing=it.id;renderPanel();return}
+  if(act==="edit"){EDIT.editing=id;renderPanel();return}
+  if(act==="done"){EDIT.editing=null;renderPanel();return}
+  if(act==="cancelnew"){EDIT.draft[EDIT.tab]=arr.filter(x=>x.id!==EDIT.editing);EDIT.editing=null;render(EDIT.draft);renderPanel();return}
+  if(act==="del"){
+    if(!b.classList.contains("armed")){b.classList.add("armed");b.textContent="Confirmar";setTimeout(()=>{if(b.isConnected){b.classList.remove("armed");b.textContent="Excluir"}},4000);return}
+    EDIT.draft[EDIT.tab]=arr.filter(x=>x.id!==id);saveLocal();render(EDIT.draft);renderPanel();return}
+  if(act==="up"||act==="down"){const i=arr.findIndex(x=>x.id===id),j=act==="up"?i-1:i+1;if(j<0||j>=arr.length)return;[arr[i],arr[j]]=[arr[j],arr[i]];saveLocal();render(EDIT.draft);renderPanel();return}
+  if(act==="discard"){if(!b.classList.contains("armed")){b.classList.add("armed");b.textContent="Confirmar descarte";setTimeout(()=>{if(b.isConnected){b.classList.remove("armed");b.textContent="Descartar"}},4000);return}
+    EDIT.draft=structuredClone(DATA);EDIT.pending={};EDIT.editing=null;clearLocal();render(DATA);renderPanel();toast("Alterações descartadas");return}
+  if(act==="publish")return publish(b);
+}
+function cleanForSave(D){const c=structuredClone(D);["eventos","noticias","galeria","parceiros","leis"].forEach(k=>{c[k]=(c[k]||[]).filter(x=>!x._novo).map(x=>{delete x._novo;return x})});return c}
+async function publish(btn){
+  if(!EDIT.api){toast("Este modo de visualização não permite publicar.");return}
+  if(!dirty()){toast("Nada novo para publicar.");return}
+  const clean=cleanForSave(EDIT.draft);
+  const used=new Set(JSON.stringify(clean).match(/midia\/[a-z0-9.\-]+/g)||[]);
+  const files={"conteudo.json":{content:JSON.stringify(clean,null,1),contentType:"application/json"}};
+  for(const [p,blob] of Object.entries(EDIT.pending))if(used.has(p))files[p]=blob;
+  btn.disabled=true;$("#pstatus").textContent="Publicando…";
+  try{
+    await EDIT.api.publish(files);
+    DATA=clean;EDIT.draft=structuredClone(clean);EDIT.pending={};clearLocal();render(DATA);renderPanel();toast("Site atualizado. Os visitantes já veem a nova versão.");
+  }catch(err){
+    const code=err&&err.code;
+    const msg={conflict:"Outra pessoa publicou ao mesmo tempo. A página vai recarregar com a versão mais nova; seu rascunho fica salvo neste navegador.",
+      not_writer:"Sua conta pode ver o site, mas não editar. Peça acesso de edição ao responsável.",
+      not_granted:"Sua conta pode ver o site, mas não editar. Peça acesso de edição ao responsável.",
+      too_large:"Arquivos grandes demais para uma publicação. Publique menos fotos por vez ou use vídeos por link.",
+      rate_limited:"Muitas publicações seguidas. Aguarde um minuto e tente de novo."}[code]||"Não foi possível publicar agora. Tente de novo em instantes.";
+    toast(msg,7000);updateStatus();
+  }finally{btn.disabled=false}
+}
+
+/* ---------- inicialização ---------- */
+async function boot(){
+  try{const r=await fetch("conteudo.json",{cache:"no-cache"});DATA=await r.json()}
+  catch(e){DATA={site:{heroTitulo:"FEMCAR",heroSub:"Federação Mineira de Carrinhos de Rolimã",email:"femcarrolima@gmail.com",instagram:"@femcarrolima",whatsapp:"(31) 99866-9613"},eventos:[],noticias:[],galeria:[],parceiros:[],leis:[]}}
+  render(DATA);
+  const use=window.claude&&window.claude.use;
+  if(!use)return;
+  try{
+    const [art,usr]=await Promise.all([window.claude.use("artifact"),window.claude.use("user")]);
+    if(!art)return;
+    EDIT.api=art;
+    const can=usr?await usr.canEdit():false;
+    if(can){$("#fab").hidden=false;$("#editLink").hidden=false}
+  }catch(e){}
+}
+$("#galMore").addEventListener("click",()=>{UI.allGal=true;render(EDIT.draft||DATA)});
+$("#pastMore").addEventListener("click",()=>{UI.allPast=true;render(EDIT.draft||DATA)});
+boot();
+})();
+</script>
+
+</body>
+</html>

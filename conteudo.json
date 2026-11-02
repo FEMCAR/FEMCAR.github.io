@@ -1,0 +1,458 @@
+{
+ "site": {
+  "heroEtiqueta": "Desde 2017 nas ladeiras de Belo Horizonte",
+  "heroTitulo": "Ladeira abaixo, de geração em geração",
+  "heroSub": "A FEMCAR - FEDERAÇÃO MINEIRA DE CARRINHOS DE ROLIMÃ organiza campeonatos e eventos abertos ao público em toda a região metropolitana de Belo Horizonte e no Estado de Minas Gerais. Tem carrinho para quem já pilota e para quem nunca desceu uma rua, com empréstimo gratuito de equipamentos e carrinhos adaptados.",
+  "heroImg": "midia/femcar-ev06-c.jpg",
+  "sobre": "Tudo começou em 2017, quando um grupo de amigos com saudade das brincadeiras de infância fabricou alguns carrinhos para se divertir. A prática cresceu a cada encontro e atraiu novos praticantes. Com o crescimento em Belo Horizonte e em Minas Gerais, o grupo fundou a Federação Mineira de Carrinhos de Rolimã em 23 de junho de 2020 para reunir os pilotos do estado, organizar campeonatos e buscar o reconhecimento do rolimã como esporte.\nEsse reconhecimento só foi possível graças ao incessante trabalho da FEMCAR junto ao poder público. Em Belo Horizonte, a Lei nº 11.503/2023, de autoria do vereador Wilsinho da Tabu, instituiu o Dia Municipal do Carrinho de Rolimã, celebrado em 25 de maio. Depois, a Lei nº 11.886/2025, do vereador José Ferreira, reconheceu a corrida de carrinho de rolimã como prática esportiva na capital. Em Contagem, a Câmara Municipal aprovou o Projeto de Lei nº 422/2025, do vereador Denilson da JUC, que reconhece a corrida de rolimã como prática esportiva no município. Por fim, em todo o Estado de Minas Gerais, a Lei nº 25.969/2026, do deputado estadual Grego da Fundação, reconheceu a corrida como modalidade esportiva e atividade de lazer.",
+  "email": "femcarrolima@gmail.com",
+  "instagram": "@femcarrolima",
+  "whatsapp": "(31) 99866-9613",
+  "locaisBH": "Mangabeiras, João Pinheiro, Santa Inês, Providência, Bairro São Paulo, Sagrada Família, Mantiqueira, Savassi, Concórdia, Betânia, Barreiro, Dom Cabral, Pampulha, etc...",
+  "cidades": "Contagem, Ribeirão das Neves, Itabirito, Divinópolis, Ouro Branco, Caeté, Santa Luzia, Lagoa Santa etc...",
+  "necessidades": "Construção e compra de carrinhos, inclusive adaptados\nTendas, mesas, rádios de comunicação e sonorização\nGerador de energia\nPrimeiros socorros\nÁgua, gelo e frutas para pilotos e público\nTransporte de carga até o local do evento"
+ },
+ "eventos": [
+  {
+   "id": "ev-dia-municipal-2024",
+   "titulo": "Dia Municipal do Carrinho de Rolimã",
+   "data": "2024-05-26",
+   "hora": "",
+   "local": "Av. Cristóvão Colombo, Praça da Liberdade",
+   "cidade": "Belo Horizonte",
+   "descricao": "Grande evento comemorativo do Dia Municipal do Carrinho de Rolimã, com descidas abertas ao público e ampla cobertura da imprensa.",
+   "img": "",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-01",
+   "titulo": "Evento de carrinho de Rolimã: Savassi",
+   "data": "2025-05-25",
+   "hora": "",
+   "local": "Savassi",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev01-b.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-02",
+   "titulo": "Evento de carrinho de Rolimã: Sagrada Família",
+   "data": "2025-06-01",
+   "hora": "",
+   "local": "Bairro Sagrada Família",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev02-b.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-03",
+   "titulo": "Evento de carrinho de Rolimã: Dom Cabral",
+   "data": "2025-06-22",
+   "hora": "",
+   "local": "Bairro Dom Cabral",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev03-c.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-04",
+   "titulo": "Evento de carrinho de Rolimã: Concórdia",
+   "data": "2025-07-06",
+   "hora": "",
+   "local": "Bairro Concórdia",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev04-c.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-05",
+   "titulo": "Evento de carrinho de Rolimã: Barreiro",
+   "data": "2025-07-20",
+   "hora": "9h às 13h",
+   "local": "Av. Deputado Álvaro Antônio, Barreiro",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-06",
+   "titulo": "Evento de carrinho de Rolimã: Mantiqueira",
+   "data": "2025-08-10",
+   "hora": "",
+   "local": "Bairro Mantiqueira",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev06-b.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-07",
+   "titulo": "Evento de carrinho de Rolimã: Lajedo",
+   "data": "2025-08-30",
+   "hora": "",
+   "local": "Bairro Lajedo",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev07-a.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-08",
+   "titulo": "Evento de carrinho de Rolimã: Jardim América",
+   "data": "2025-09-14",
+   "hora": "",
+   "local": "Bairro Jardim América",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev08-a.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-09",
+   "titulo": "Evento de carrinho de Rolimã: Betânia",
+   "data": "2025-10-12",
+   "hora": "",
+   "local": "Bairro Betânia",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev09-a.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-10",
+   "titulo": "Evento de carrinho de Rolimã: Nova Pampulha",
+   "data": "2025-10-19",
+   "hora": "",
+   "local": "Bairro Nova Pampulha",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev10-a.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-11",
+   "titulo": "Evento de carrinho de Rolimã: Dom Cabral",
+   "data": "2025-11-23",
+   "hora": "",
+   "local": "Bairro Dom Cabral",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev11-a.jpg",
+   "link": ""
+  },
+  {
+   "id": "ev-pbh-2025-12",
+   "titulo": "Evento de carrinho de Rolimã: Savassi",
+   "data": "2025-12-07",
+   "hora": "",
+   "local": "Savassi",
+   "cidade": "Belo Horizonte",
+   "descricao": "Descida aberta ao público, realizada em parceria com a Prefeitura de Belo Horizonte.",
+   "img": "midia/femcar-ev12-a.jpg",
+   "link": ""
+  }
+ ],
+ "noticias": [
+  {
+   "id": "nt-lei-mg-25969",
+   "titulo": "Minas Gerais reconhece a corrida de carrinho de rolimã como modalidade esportiva",
+   "data": "2026-07-15",
+   "resumo": "A Lei nº 25.969/2026, do deputado estadual Grego da Fundação, vale para todo o estado.",
+   "texto": "Foi publicada em 15 de julho de 2026, no Diário Oficial “Minas Gerais”, a Lei nº 25.969, de 14 de julho de 2026. A lei reconhece a relevância da corrida de carrinho de rolimã como modalidade esportiva e atividade de lazer no Estado, com o objetivo de valorizar, proteger e incentivar a prática.\nO texto teve origem no Projeto de Lei nº 3.935/2025, de autoria do deputado estadual Grego da Fundação, aprovado pela Assembleia Legislativa de Minas Gerais. A FEMCAR acompanhou e apoiou a tramitação.",
+   "img": "",
+   "link": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/25969/2026/"
+  },
+  {
+   "id": "nt-contagem-pl422",
+   "titulo": "Câmara de Contagem aprova o rolimã como prática esportiva",
+   "data": "2025-10-07",
+   "resumo": "O Projeto de Lei nº 422/2025, do vereador Denilson da JUC, foi aprovado em 2º turno.",
+   "texto": "A Câmara Municipal de Contagem aprovou em 7 de outubro de 2025, em 2º turno, o Projeto de Lei nº 422/2025, de autoria do vereador Denilson da JUC. O texto reconhece a corrida de rolimã como prática esportiva, cultural e de lazer no município e institui o Dia Municipal do Carrinho de Rolimã em Contagem.",
+   "img": "",
+   "link": "http://www.cmc.mg.gov.br/?p=27689"
+  },
+  {
+   "id": "nt-lei-bh-11886",
+   "titulo": "Corrida de carrinho de rolimã é reconhecida como esporte em Belo Horizonte",
+   "data": "2025-08-13",
+   "resumo": "A Lei nº 11.886/2025, do vereador José Ferreira, foi publicada no Diário Oficial do Município.",
+   "texto": "Belo Horizonte reconheceu oficialmente a corrida de carrinho de rolimã como prática esportiva. A Lei nº 11.886/2025 foi sancionada e publicada no Diário Oficial do Município em 13 de agosto de 2025.\nA lei teve origem no Projeto de Lei nº 76/2025, de autoria do vereador José Ferreira, aprovado pela Câmara Municipal de Belo Horizonte. O texto exige o uso de equipamentos de segurança pelos competidores e define a corrida como evento licenciado, com aparato de segurança e socorro estabelecido pelos órgãos competentes.",
+   "img": "",
+   "link": "https://cmbh.mg.gov.br/comunica%C3%A7%C3%A3o/not%C3%ADcias/2025/08/corrida-de-carrinho-de-rolim%C3%A3-%C3%A9-reconhecida-como-esporte-oficial-em-bh"
+  },
+  {
+   "id": "nt-dia-municipal-evento",
+   "titulo": "FEMCAR celebra o Dia Municipal do Carrinho de Rolimã na Praça da Liberdade",
+   "data": "2024-05-26",
+   "resumo": "A Av. Cristóvão Colombo virou pista para pilotos, famílias e curiosos.",
+   "texto": "Em 26 de maio de 2024 a FEMCAR promoveu um grande evento na Av. Cristóvão Colombo, na região da Praça da Liberdade, para comemorar o Dia Municipal do Carrinho de Rolimã. A festa reuniu pilotos experientes, crianças, famílias e quem queria matar a saudade da infância, e teve ampla cobertura da imprensa.",
+   "img": "",
+   "link": ""
+  },
+  {
+   "id": "nt-lei-dia-municipal",
+   "titulo": "Belo Horizonte tem o Dia Municipal do Carrinho de Rolimã: 25 de maio",
+   "data": "2023-05-26",
+   "resumo": "A Lei nº 11.503/2023, do vereador Wilsinho da Tabu, incluiu a data no calendário da cidade.",
+   "texto": "Belo Horizonte passou a ter um dia dedicado ao carrinho de rolimã. A Lei nº 11.503/2023, de autoria do vereador Wilsinho da Tabu e outros, incluiu o Dia Municipal do Carrinho de Rolimã, celebrado em 25 de maio, na lei que reúne as datas comemorativas do município. A lei foi publicada no Diário Oficial do Município em 26 de maio de 2023.\nNa data, o poder público deve promover eventos de caráter educativo e informativo para valorizar a brincadeira tradicional.",
+   "img": "",
+   "link": "https://cmbhsildownload.cmbh.mg.gov.br/silinternet/servico/download/documentoDaNorma?idDocDaNorma=2c907f76884801a7018857e1938b0084"
+  },
+  {
+   "id": "nt-federacoes-irmas",
+   "titulo": "FEMCAR ajudou a criar federações em São Paulo, Paraná e Espírito Santo",
+   "data": "",
+   "resumo": "A experiência mineira serviu de base para entidades de outros estados.",
+   "texto": "Pioneira, a FEMCAR auxiliou na criação formal de entidades congêneres nos estados de São Paulo, Paraná e Espírito Santo, ajudando a organizar o carrinho de rolimã como esporte em outras regiões do país.",
+   "img": "",
+   "link": ""
+  }
+ ],
+ "galeria": [
+  {
+   "id": "gl-ev06-c",
+   "tipo": "foto",
+   "url": "midia/femcar-ev06-c.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Mantiqueira",
+   "destaque": true
+  },
+  {
+   "id": "gl-ev08-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev08-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Jardim América",
+   "destaque": true
+  },
+  {
+   "id": "gl-ev12-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev12-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Savassi",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev02-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev02-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Sagrada Família",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev03-c",
+   "tipo": "foto",
+   "url": "midia/femcar-ev03-c.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Dom Cabral",
+   "destaque": true
+  },
+  {
+   "id": "gl-ev07-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev07-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Lajedo",
+   "destaque": true
+  },
+  {
+   "id": "gl-ev06-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev06-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Mantiqueira",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev01-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev01-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Savassi",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev09-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev09-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Betânia",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev04-c",
+   "tipo": "foto",
+   "url": "midia/femcar-ev04-c.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Concórdia",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev12-c",
+   "tipo": "foto",
+   "url": "midia/femcar-ev12-c.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Savassi",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev08-c",
+   "tipo": "foto",
+   "url": "midia/femcar-ev08-c.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Jardim América",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev02-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev02-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Sagrada Família",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev10-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev10-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Nova Pampulha",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev11-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev11-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Dom Cabral",
+   "destaque": true
+  },
+  {
+   "id": "gl-ev07-c",
+   "tipo": "foto",
+   "url": "midia/femcar-ev07-c.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Lajedo",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev12-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev12-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Savassi",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev01-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev01-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Savassi",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev11-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev11-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Dom Cabral",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev04-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev04-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Concórdia",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev02-c",
+   "tipo": "foto",
+   "url": "midia/femcar-ev02-c.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Sagrada Família",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev08-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev08-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Jardim América",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev06-a",
+   "tipo": "foto",
+   "url": "midia/femcar-ev06-a.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Mantiqueira",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev11-c",
+   "tipo": "foto",
+   "url": "midia/femcar-ev11-c.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Dom Cabral",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev07-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev07-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Lajedo",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev03-b",
+   "tipo": "foto",
+   "url": "midia/femcar-ev03-b.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Dom Cabral",
+   "destaque": false
+  },
+  {
+   "id": "gl-ev12-d",
+   "tipo": "foto",
+   "url": "midia/femcar-ev12-d.jpg",
+   "legenda": "Evento de carrinho de Rolimã: Savassi",
+   "destaque": false
+  }
+ ],
+ "parceiros": [],
+ "leis": [
+  {
+   "id": "lei-bh-11503",
+   "ente": "Belo Horizonte",
+   "titulo": "Lei nº 11.503/2023",
+   "descricao": "Inclui o Dia Municipal do Carrinho de Rolimã, 25 de maio, no calendário oficial de datas comemorativas de Belo Horizonte.",
+   "autor": "Vereador Wilsinho da Tabu e outros",
+   "detalhes": "Publicada no Diário Oficial do Município em 26/05/2023",
+   "link": "https://cmbhsildownload.cmbh.mg.gov.br/silinternet/servico/download/documentoDaNorma?idDocDaNorma=2c907f76884801a7018857e1938b0084",
+   "link2": "",
+   "link2Texto": "",
+   "linkTexto": "Ver texto oficial"
+  },
+  {
+   "id": "lei-bh-11886",
+   "ente": "Belo Horizonte",
+   "titulo": "Lei nº 11.886/2025",
+   "descricao": "Reconhece a corrida de carrinho de rolimã como prática esportiva no município, com uso obrigatório de equipamentos de segurança e eventos licenciados com aparato de segurança e socorro.",
+   "autor": "Vereador José Ferreira",
+   "detalhes": "Origem: PL 76/2025 · Publicada no Diário Oficial do Município em 13/08/2025",
+   "link": "http://cmbhsildownload.cmbh.mg.gov.br/silinternet/servico/download/documentoDaNorma?idDocDaNorma=2c907f76987b841f0198a377bec2011f",
+   "link2": "https://dom-web.pbh.gov.br/visualizacao/ato/466900",
+   "link2Texto": "Ver no DOM",
+   "linkTexto": "Ver texto oficial"
+  },
+  {
+   "id": "lei-contagem-pl422",
+   "ente": "Contagem",
+   "titulo": "Projeto de Lei nº 422/2025",
+   "descricao": "Reconhece a corrida de rolimã como prática esportiva, cultural e de lazer e institui o Dia Municipal do Carrinho de Rolimã em Contagem.",
+   "autor": "Vereador Denilson da JUC",
+   "detalhes": "Aprovado pela Câmara Municipal de Contagem em 07/10/2025",
+   "link": "http://www.cmc.mg.gov.br/?p=27689",
+   "link2": "",
+   "link2Texto": "",
+   "linkTexto": "Ver na Câmara de Contagem"
+  },
+  {
+   "id": "lei-mg-25969",
+   "ente": "Estado de Minas Gerais",
+   "titulo": "Lei nº 25.969, de 14/07/2026",
+   "descricao": "Reconhece a relevância da corrida de carrinho de rolimã como modalidade esportiva e atividade de lazer no Estado.",
+   "autor": "Deputado estadual Grego da Fundação",
+   "detalhes": "Origem: PL 3.935/2025 (ALMG) · Publicada no Diário Oficial “Minas Gerais” em 15/07/2026",
+   "link": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/25969/2026/",
+   "link2": "https://www.almg.gov.br/projetos-de-lei/PL/3935/2025",
+   "link2Texto": "Ver tramitação",
+   "linkTexto": "Ver texto oficial"
+  }
+ ]
+}
